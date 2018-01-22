@@ -1,0 +1,10 @@
+{
+  "name": "MaterialUIExample",
+  "dependencies": {
+    "angular": "v1.6.8",
+    "angular-route": "v1.6.8",
+    "angular-resource": "v1.6.8",
+    "angular-material": "v1.1.6",
+    "font-awesome": "fontawesome#v4.7.0"
+  }
+}
