@@ -25,7 +25,7 @@
                     }).when('/testinomials', {
                         template:'<products-component></products-component>'
                     }).when('/products', {
-                        template: '<products-component></products-component>'
+                        template: '<products></products>'
                     })
                     .otherwise('/');
             }

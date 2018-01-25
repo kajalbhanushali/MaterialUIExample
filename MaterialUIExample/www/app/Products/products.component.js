@@ -3,25 +3,31 @@
         .component("products", {
             templateUrl: "app/products/products.template.html",
             controller: function () {
-                this.testinomialslist = [
+                this.products = [
                     {
-                        testinomialsname: "Steve Breese",
-                        testinomialsdetails: "Group Financial Director",
-                        testinomialcontent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget."
+                        productsname: "cyber security"
                     },
                     {
-                        testinomialsname: "Richard Bodicoat",
-                        testinomialsdetails: "Group Financial Director",
-                        testinomialcontent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget."
+                        productsname:"Risk Management"
                     },
                     {
-                        testinomialsname: "SRussell Kennedy",
-                        testinomialsdetails: "Group Financial Director",
-                        testinomialcontent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget."
+                        productsname: "Premium Finanace"
+                    },
+                    {
+                        productsname: "Buisness Assist"
+                    },
+                    {
+                        productsname: "Terrorism Insurance"
+                    },
+                    {
+                        productsname:"crisis resilence"
                     }
+
+                    
                 ];
+
                 this.setSelected = function (index) {
-                    this.selected = this.employees[index];
+                    this.selected = this.products[index];
                     console.log(this.selected);
                 };
             }

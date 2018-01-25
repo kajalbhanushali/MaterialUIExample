@@ -8,21 +8,21 @@
                     </md-optgroup>
                 </md-select>
                 <md-virtual-repeat-container>
-                    <div flex-xs flex-gt-xs="50" layout="column" ng-repeat="item in $ctrl.testinomialslist" class="list-group-item">
+                    <div flex-xs flex-gt-xs="50" layout="column" ng-repeat="item in $ctrl.productslist" class="list-group-item">
                         <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
                             <md-card-title>
                                 <md-card-title-text>
                                     <span class="md-headline">
-                                        {{ item.testinomialsname }}
+                                        {{ item.productsname }}
                                     </span>
                                 </md-card-title-text>
 
                             </md-card-title>
-                            <md-card-content>
+                            <!--<md-card-content>
                                 <span class="md-subhead">
                                     {{ item.testinomialsdetails }}
                                 </span>
-                            </md-card-content>
+                            </md-card-content>-->
                         </md-card>
 
                     </div>
