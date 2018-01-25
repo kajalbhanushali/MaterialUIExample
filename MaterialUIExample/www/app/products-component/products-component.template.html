@@ -1,0 +1,48 @@
+﻿<div layout="row">
+    <div flex="33" style="border-right:solid 1px">
+        <div layout="column" layout-padding id="employee-list">
+            <md-content class="md-padding" layout-xs="column" layout="column">
+                <md-virtual-repeat-container>
+                    <div flex-xs flex-gt-xs="50" layout="column" ng-repeat="item in $ctrl.testinomialslist" class="list-group-item">
+                        <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+                            <md-card-title>
+                                <md-card-title-text>
+                                    <span class="md-headline">
+                                        {{ item.testinomialsname }}
+                                    </span>
+                                </md-card-title-text>
+
+                            </md-card-title>
+                            <md-card-content>
+                                <span class="md-subhead">
+                                    {{ item.testinomialsdetails }}
+                                </span>
+                            </md-card-content>
+                        </md-card>
+
+                    </div>
+                </md-virtual-repeat-container>
+
+            </md-content>
+        </div>
+    </div>
+    <div flex="66">
+        <div layout="row" layout-padding id="testinomialsdetails">
+            <div flex="22">
+                <md-icon md-font-icon="fa fa-user-circle-o fa-4x" style="margin-top:50px"></md-icon>
+                <!--<img src="http://placehold.it/350x150" class="md-card-image" alt="image caption" />-->
+            </div>
+            <div flex>
+                <h1>Steve Bresse</h1>
+                <p>
+                    Group Financial Director
+                </p>
+            </div>
+         </div>
+        <div id="testinomialdescription" style="margin: 0 10px 0 25px;">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.
+            </p>
+        </div>
+     </div>
+</div>

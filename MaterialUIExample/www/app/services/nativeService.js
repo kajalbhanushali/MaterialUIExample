@@ -4,7 +4,7 @@
     angular.module("pap").service("nativeService", ["$rootScope", "$window", NativeService]);
 
     function NativeService($rootScope, $window) {
-        debugger
+     
         var _this = this;
 
         var pauseCallback = function () {
@@ -29,7 +29,7 @@
 
             //Show splash screen
             navigator.splashscreen.show();
-            debugger
+            
             //Hide splash screen after 5 sec
             setTimeout(function () {
                 navigator.splashscreen.hide();
