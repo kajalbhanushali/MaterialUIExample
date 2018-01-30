@@ -3,7 +3,7 @@
         .component("products", {
             templateUrl: "app/products/products.template.html",
             controller: function () {
-                this.products = [
+                this.productslist = [
                     {
                         productsname: "cyber security"
                     },
@@ -25,10 +25,18 @@
 
                     
                 ];
-
+                this.selectedItem;
                 this.setSelected = function (index) {
-                    this.selected = this.products[index];
+                    this.selected = this.productslist[index];
                     console.log(this.selected);
+                };
+                this.getSelectedText = function () {
+                    debugger
+                    if (this.selectedItem !== undefined) {
+                        return "You have selected: Item " + this.selectedItem;
+                    } else {
+                        return "Please select an item";
+                    }
                 };
             }
         });

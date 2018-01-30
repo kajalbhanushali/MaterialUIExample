@@ -2,13 +2,34 @@
     <div flex="33" style="border-right:solid 1px">
         <div layout="column" layout-padding id="employee-list">
             <md-content class="md-padding" layout-xs="column" layout="column">
-                <md-select ng-model="selectedItem" md-selected-text="getSelectedText()">
-                    <md-optgroup label="items">
-                        <md-option ng-value="item" ng-repeat="item in products">Item {{item}}</md-option>
-                    </md-optgroup>
-                </md-select>
+                <md-input-container>
+                    <label>Products</label>
+                    <md-select ng-model="selectedItem" md-selected-text="getSelectedText()">
+                        <!--<md-option><em>None</em></md-option>-->
+                        <!--<md-optgroup label="productslist">-->
+                        <md-option ng-repeat="item in $ctrl.productslist" ng-value="item.productsname" ng-disabled="$index === 1">
+                            {{item.productsname}}
+                        </md-option>
+                        <!--</md-optgroup>-->
+                    </md-select>
+                </md-input-container>
+
+                <md-input-container>
+                    <label>Items</label>
+                    <md-select ng-model="selectedItem" md-selected-text="getSelectedText()">
+                        <md-optgroup label="item">
+                            <md-option ng-value="item.productsname" ng-repeat="item in $ctrl.productslist">{{item.productsname}}</md-option>
+                        </md-optgroup>
+                    </md-select>
+                </md-input-container>
+
+                <!--<md-select ng-model="selectedItem" md-selected-text="getSelectedText()">
+        <md-optgroup label="items">
+            <md-option ng-value="productsname" ng-repeat="productsname in $ctrl.productslist">Item {{productsname}}</md-option>
+        </md-optgroup>
+    </md-select>-->
                 <md-virtual-repeat-container>
-                    <div flex-xs flex-gt-xs="50" layout="column" ng-repeat="item in $ctrl.products" class="list-group-item">
+                    <div flex-xs flex-gt-xs="50" layout="column" ng-repeat="item in $ctrl.productslist" class="list-group-item">
                         <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
                             <md-card-title>
                                 <md-card-title-text>
@@ -19,10 +40,10 @@
 
                             </md-card-title>
                             <!--<md-card-content>
-                                <span class="md-subhead">
-                                    {{ item.testinomialsdetails }}
-                                </span>
-                            </md-card-content>-->
+                    <span class="md-subhead">
+                        {{ item.testinomialsdetails }}
+                    </span>
+                </md-card-content>-->
                         </md-card>
 
                     </div>
