@@ -4,11 +4,11 @@
             <md-content class="md-padding" layout-xs="column" layout="column">
                 <md-select ng-model="selectedItem" md-selected-text="getSelectedText()">
                     <md-optgroup label="items">
-                        <md-option ng-value="item" ng-repeat="item in items">Item {{item}}</md-option>
+                        <md-option ng-value="item" ng-repeat="item in products">Item {{item}}</md-option>
                     </md-optgroup>
                 </md-select>
                 <md-virtual-repeat-container>
-                    <div flex-xs flex-gt-xs="50" layout="column" ng-repeat="item in $ctrl.productslist" class="list-group-item">
+                    <div flex-xs flex-gt-xs="50" layout="column" ng-repeat="item in $ctrl.products" class="list-group-item">
                         <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
                             <md-card-title>
                                 <md-card-title-text>

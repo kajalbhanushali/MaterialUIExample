@@ -1,0 +1,21 @@
+﻿<main flex>
+<div layout="column" margin="50px">
+    <div>
+        <md-list layout="row" class="wrap">
+            <md-list-item ng-repeat="item in $ctrl.products" layout="column">
+                <md-card layout="row">
+                    <md-card-content>
+                        <i class="fa fa-arrow-down" ng-click="$ctrl.download()"></i>
+                        <div style="background-image: url(../../images/image.png); height: 120px; width: 120px;"></div>
+                    </md-card-content>
+
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button ng-click="$ctrl.setSlected($index)"> {{item.productsname}}</md-button>
+                    </md-card-actions>
+                </md-card>
+
+            </md-list-item>
+        </md-list>
+    </div>
+</div>
+</main>

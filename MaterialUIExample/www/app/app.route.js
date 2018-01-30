@@ -26,6 +26,11 @@
                         template:'<products-component></products-component>'
                     }).when('/products', {
                         template: '<products></products>'
+                    }).when('/allproducts', {
+                        template: '<angular-test></angular-test>'
+                        //templateUrl: 'angular-test/angulartest-template.html',
+                        //controller: 'AppCtrl'
+
                     })
                     .otherwise('/');
             }
