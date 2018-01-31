@@ -4,30 +4,15 @@
             <md-content class="md-padding" layout-xs="column" layout="column">
                 <md-input-container>
                     <label>Products</label>
-                    <md-select ng-model="selectedItem" md-selected-text="getSelectedText()">
-                        <!--<md-option><em>None</em></md-option>-->
-                        <!--<md-optgroup label="productslist">-->
-                        <md-option ng-repeat="item in $ctrl.productslist" ng-value="item.productsname" ng-disabled="$index === 1">
+                    <md-select ng-value="masme" ng-selected=""
+                               ng-model="selectedItem" md-selected={{selectedItem}}>
+                        <md-option ng-selected="{{selectedItem}}" ng-repeat="item in $ctrl.productslist" ng-value="item.productsname" ng-disabled="$index === 1">
                             {{item.productsname}}
                         </md-option>
                         <!--</md-optgroup>-->
                     </md-select>
                 </md-input-container>
 
-                <md-input-container>
-                    <label>Items</label>
-                    <md-select ng-model="selectedItem" md-selected-text="getSelectedText()">
-                        <md-optgroup label="item">
-                            <md-option ng-value="item.productsname" ng-repeat="item in $ctrl.productslist">{{item.productsname}}</md-option>
-                        </md-optgroup>
-                    </md-select>
-                </md-input-container>
-
-                <!--<md-select ng-model="selectedItem" md-selected-text="getSelectedText()">
-        <md-optgroup label="items">
-            <md-option ng-value="productsname" ng-repeat="productsname in $ctrl.productslist">Item {{productsname}}</md-option>
-        </md-optgroup>
-    </md-select>-->
                 <md-virtual-repeat-container>
                     <div flex-xs flex-gt-xs="50" layout="column" ng-repeat="item in $ctrl.productslist" class="list-group-item">
                         <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
@@ -39,11 +24,6 @@
                                 </md-card-title-text>
 
                             </md-card-title>
-                            <!--<md-card-content>
-                    <span class="md-subhead">
-                        {{ item.testinomialsdetails }}
-                    </span>
-                </md-card-content>-->
                         </md-card>
 
                     </div>
@@ -54,9 +34,14 @@
     </div>
     <div flex="66">
         <div id="testinomialdescription" style="margin: 0 10px 0 25px;">
+            <div>
+
+            </div>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.
             </p>
+
+            <div>{{selectedItem}} </div>
         </div>
     </div>
 </div>

@@ -31,6 +31,8 @@
                         //templateUrl: 'angular-test/angulartest-template.html',
                         //controller: 'AppCtrl'
 
+                    }).when('/products/:id', {
+                        template: '<products></products>'
                     })
                     .otherwise('/');
             }

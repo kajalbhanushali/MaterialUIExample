@@ -2,7 +2,7 @@
     angular.module('angular.test')
         .component("angularTest", {
             templateUrl: "app/angular-test/angulartest-template.html",
-            controller: ['$routeParams', '$location', '$window', function ($location, $window, $routeParams) {
+            controller: ['$routeParams', '$scope', function ($routeParams, $scope) {
                 this.products = [
                     {
                         productsname: "cyber security"
@@ -22,19 +22,16 @@
                     {
                         productsname: "crisis resilence"
                     }
-
-
                 ];
 
                 this.download = function () {
-                   alert("downloading");
+               
                 };
                 this.setSlected = function (index) {
-                    debugger
+                  
                     var selected = this.products[index];
-                    console.log(selected);
-                    console.clear();
-                    window.location.href = '#!/products/';
+                    $routeParams.prodname = selected.productsname;
+                    window.location.href = '#!/products/' + index;
                 }
             }]
         });
