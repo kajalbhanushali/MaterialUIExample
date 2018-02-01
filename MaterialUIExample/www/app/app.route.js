@@ -33,6 +33,8 @@
 
                     }).when('/products/:id', {
                         template: '<products></products>'
+                    }).when('/menu', {
+                        template: '<menu-component></menu-component>'
                     })
                     .otherwise('/');
             }

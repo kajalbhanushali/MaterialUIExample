@@ -1,7 +1,14 @@
 {
-    "name": "MaterialUIExample",
-    "version": "1.0.0",
-    "private": true,
-    "dependencies": {
+  "name": "MaterialUIExample",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "angular-devices-detector": "^1.0.5",
+    "uk.co.workingedge.phonegap.plugin.istablet": "^1.2.0"
+  },
+  "cordova": {
+    "plugins": {
+      "uk.co.workingedge.phonegap.plugin.istablet": {}
     }
+  }
 }

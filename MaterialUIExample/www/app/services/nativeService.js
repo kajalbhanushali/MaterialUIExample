@@ -17,6 +17,8 @@
 
         var deviceReadyCallback = function () {
             // Handle the Cordova pause and resume events
+
+        
             document.addEventListener('pause', pauseCallback.bind(this), false);
             document.addEventListener('resume', resumeCallback.bind(this), false);
 

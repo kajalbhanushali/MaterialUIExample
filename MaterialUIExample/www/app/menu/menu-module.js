@@ -1,4 +1,4 @@
 ﻿(function () {
     "use strict";
-    angular.module('menu', ['ngRoute', 'ngMaterial']);
+    angular.module('menu.app', ['ngRoute', 'ngMaterial']);
 })();
