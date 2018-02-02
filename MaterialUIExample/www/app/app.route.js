@@ -7,7 +7,7 @@
             function config($locationProvider, $routeProvider) {
                 //debugger
                 $locationProvider.hashPrefix('!');
-                $routeProvider.
+                $routeProvider. 
                     when('/', {
                         template: '<hexagon-component></hexagon-component>'
                     }).when('/page1', {
