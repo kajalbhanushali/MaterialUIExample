@@ -31,7 +31,8 @@
     <script type="text/javascript" src="angular-devices-detector.js"></script>
     
 </head>
-<body ng-app="pap"  layout="column" flex>
+<body ng-app="pap" layout="column" flex>
+
     <header>
         <md-toolbar md-scroll-shrink>
             <div layout="column" layout-align="center center" flex>
@@ -40,49 +41,51 @@
         </md-toolbar>
     </header>
 
-    <div layout="row" flex class="flex-80">
+    <!--<div layout="row" flex>
         <md-sidenav md-is-locked-open="true">
             Nav item
         </md-sidenav>
         <md-content>
             <div ng-view></div>
         </md-content>
-    </div>
-           
-    
+    </div>-->
 
-    <div class="flex-10">
-        <footer>
-            <md-toolbar class="md-scroll-shrink">
-                <md-nav-bar md-no-ink-bar="disableInkBar"
-                            md-selected-nav-item="currentNavItem"
-                            nav-bar-aria-label="navigation links">
-                    <md-nav-item md-nav-href="#!/page1" name="page1" aria-label="navigation links">
-                        <md-icon md-font-icon="fa fa-home fa-2x"></md-icon>
-                    </md-nav-item>
-                    <md-nav-item md-nav-href="#!/page2" name="page2" aria-label="navigation links">
-                        <md-icon md-font-icon="fa fa-search fa-2x"></md-icon>
-                    </md-nav-item>
-                    <md-nav-item md-nav-href="#!/page3" name="page3" aria-label="navigation links">
-                        <md-icon md-font-icon="fa fa-cog fa-2x"></md-icon>
-                    </md-nav-item>
-                    <md-nav-item md-nav-href="#!/testinomials" name="products" aria-label="navigation links">
-                        <md-icon md-font-icon="fa fa-cog fa-2x"></md-icon>
-                    </md-nav-item>
-                    <md-nav-item md-nav-href="#!/products" name="productslist" aria-label="navigation links">
-                        <md-icon md-font-icon="fa fa-cog fa-2x"></md-icon>
-                    </md-nav-item>
-                    <md-nav-item md-nav-href="#!/allproducts" name="AllProducts" aria-label="navigation links">
-                        <md-icon md-font-icon="fa fa-bell-o 2x"></md-icon>
-                    </md-nav-item>
-                    <md-nav-item md-nav-href="#!/menu" name="menu" aria-label="navigation links">
-                        <md-icon md-font-icon="fa fa-bars"></md-icon>
-                    </md-nav-item>
-                </md-nav-bar>
-            </md-toolbar>
-        </footer>
 
-    </div>
+        <div ng-view layout="row" flex></div>
+
+
+        <div layout="row" flex>
+            <footer>
+                <md-toolbar class="md-scroll-shrink">
+                    <md-nav-bar md-no-ink-bar="disableInkBar"
+                                md-selected-nav-item="currentNavItem"
+                                nav-bar-aria-label="navigation links">
+                        <md-nav-item md-nav-href="#!/page1" name="page1" aria-label="navigation links">
+                            <md-icon md-font-icon="fa fa-home fa-2x"></md-icon>
+                        </md-nav-item>
+                        <md-nav-item md-nav-href="#!/page2" name="page2" aria-label="navigation links">
+                            <md-icon md-font-icon="fa fa-search fa-2x"></md-icon>
+                        </md-nav-item>
+                        <md-nav-item md-nav-href="#!/page3" name="page3" aria-label="navigation links">
+                            <md-icon md-font-icon="fa fa-cog fa-2x"></md-icon>
+                        </md-nav-item>
+                        <md-nav-item md-nav-href="#!/testinomials" name="products" aria-label="navigation links">
+                            <md-icon md-font-icon="fa fa-cog fa-2x"></md-icon>
+                        </md-nav-item>
+                        <md-nav-item md-nav-href="#!/products" name="productslist" aria-label="navigation links">
+                            <md-icon md-font-icon="fa fa-cog fa-2x"></md-icon>
+                        </md-nav-item>
+                        <md-nav-item md-nav-href="#!/allproducts" name="AllProducts" aria-label="navigation links">
+                            <md-icon md-font-icon="fa fa-bell-o 2x"></md-icon>
+                        </md-nav-item>
+                        <md-nav-item md-nav-href="#!/menu" name="menu" aria-label="navigation links">
+                            <md-icon md-font-icon="fa fa-bars"></md-icon>
+                        </md-nav-item>
+                    </md-nav-bar>
+                </md-toolbar>
+            </footer>
+
+        </div>
 
         <script type="text/javascript" src="app/app.module.js"></script>
         <script type="text/javascript" src="app/app.config.js"></script>
